@@ -1,0 +1,17 @@
+<h1 style="margin-left: 45px;">Information</h1>
+
+<table id="students">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td >{{ user.name }}</td>
+        <td >{{ user.age }}</td>
+      </tr>
+    </tbody>
+  </table>
+  

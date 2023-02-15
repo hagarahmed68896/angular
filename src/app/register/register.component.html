@@ -1,0 +1,19 @@
+<form (ngSubmit)="submit()" style="padding: 10px;text-align: center;">
+  <h1>Registration</h1>
+    <label>
+      Name:
+      <input [(ngModel)]="name" name="name" required minlength="3">
+    </label><br>
+    <div *ngIf="name.length<3 && name" style="color: red;">
+      name length must be more than 3 characters
+    </div><br>
+    <label>
+      Age:
+      <input type="text" [(ngModel)]="age" name="age" required>
+    </label><br>
+    <div *ngIf="(+age<20 || +age>40) && age" style="color: red;">
+      age must be between 20 and 40 years
+    </div>
+    <br>
+    <button type="submit" [disabled]="name.length < 3 || +age < 20 || +age > 40">Register</button>
+  </form>

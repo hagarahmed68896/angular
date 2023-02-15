@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'lab3-form';
+  users: { name: string; age: string }[] = [];
+
+  handleRegister(user: { name: string; age: string }) {
+    this.users.push(user);
+  }
 }
